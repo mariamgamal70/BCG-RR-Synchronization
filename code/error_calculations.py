@@ -11,7 +11,7 @@ def calculate_errors(bcg_heartrate, aligned_rr_hr, bcg_heartrate_timestamps):
     plt.title("Comparison of BCG and RR Heart Rates")
     plt.legend()
     plt.grid()
-    plt.savefig("heart_rate_comparison_plot.png", dpi=300) 
+    plt.savefig("../results/heart_rate_comparison_plot.png", dpi=300) 
 
     #error calculation and plotting 
     # Compute error metrics
@@ -40,7 +40,7 @@ def calculate_errors(bcg_heartrate, aligned_rr_hr, bcg_heartrate_timestamps):
     plt.title("Bland-Altman Plot")
     plt.legend()
     plt.grid()
-    plt.savefig("bland_altman_plot.png", dpi=300)
+    plt.savefig("../results/bland_altman_plot.png", dpi=300)
     plt.close()
     # Pearson correlation
     correlation = np.corrcoef(bcg_heartrate, aligned_rr_hr)[0, 1]
@@ -52,7 +52,7 @@ def calculate_errors(bcg_heartrate, aligned_rr_hr, bcg_heartrate_timestamps):
     plt.ylabel("BCG Heart Rate (BPM)")
     plt.title(f"Pearson Correlation Plot (r = {correlation:.2f})")
     plt.grid()
-    plt.savefig("pearson_scatter_plot.png", dpi=300)
+    plt.savefig("../results/pearson_scatter_plot.png", dpi=300)
     plt.close()
     # Boxplot for BCG and RR heart rates
     plt.figure(figsize=(8, 6))
