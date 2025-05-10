@@ -30,23 +30,23 @@ pip install numpy pandas scipy scikit-learn
 ```
 ## 📁 File Structure
 File	Description
-**main.py**:	Main script that processes data and runs pipeline
-**band_pass_filtering.py**:	Band-pass filter implementation
-**compute_vitals.py**:	Computes heart rate from wavelet cycles
-**detect_body_movements.py**:	Detects and removes body movements in BCG
-**modwt_matlab_fft.py**:	Wavelet decomposition function
-**modwt_mra_matlab_fft.py**:	Wavelet multi-resolution analysis
-**error_calculations.py**:	Calculates and visualizes errors
+- **main.py**:	Main script that processes data and runs pipeline
+- **band_pass_filtering.py**:	Band-pass filter implementation
+- **compute_vitals.py**:	Computes heart rate from wavelet cycles
+- **detect_body_movements.py**:	Detects and removes body movements in BCG
+- **modwt_matlab_fft.py**:	Wavelet decomposition function
+- **modwt_mra_matlab_fft.py**:	Wavelet multi-resolution analysis
+- **error_calculations.py**:	Calculates and visualizes errors
 
 ## 🚀 How to Run
-1- download dataset from here https://doi.org/10.6084/m9.figshare.26013157 
-2- learn more about dataset from here if needed https://www.nature.com/articles/s41597-024-03950-5
-3- replace this line 
+- 1- download dataset from here https://doi.org/10.6084/m9.figshare.26013157 
+- 2- learn more about dataset from here if needed https://www.nature.com/articles/s41597-024-03950-5
+- 3- replace this line 
 ``` dataset_root = '../../dataset/dataset/data/'
 ```
 by your dataset root folder path
 
-4- Run the main script:
+- 4- Run the main script:
 ```bash
 python main.py
 ```
@@ -56,36 +56,36 @@ The script will process each subject’s data, synchronize timestamps, estimate 
 BCG Data
 **A CSV file with 2 columns:**
 
-BCG signal values
+BCG signal values,
 
 Start time (Unix timestamp in milliseconds)
 
 **RR Data**
 A CSV file with 3 columns:
 
-Timestamps (YYYY/MM/DD HH:MM:SS format)
+Timestamps (YYYY/MM/DD HH:MM:SS format),
 
-Heart rate (BPM)
+Heart rate (BPM),
 
 RR interval in seconds
 
 ## 📤 Output
-**Heart Rate Metrics:**
+- **Heart Rate Metrics:**
 
 Minimum, maximum, and average heart rates for both BCG and RR datasets.
 
-**Error Metrics:**
+- **Error Metrics:**
 
 Error statistics between BCG-derived and RR-derived heart rates.
 
-**Plots:**
+- **Plots:**
 
 Visualizations of heart rate comparisons and error distributions (if implemented in error_calculations.py)
 
 ## 🔑 Key Functions
 Function	Description
-**detect_patterns**	Detects body movements and removes affected segments
-**band_pass_filtering**	Applies Chebyshev Type I band-pass filter
-**modwt, modwtmra**	Wavelet decomposition and multi-resolution analysis
-**vitals**	Estimates heart rate from wavelet cycles
-**calculate_errors**	Computes and visualizes errors between heart rates
+- **detect_patterns**	Detects body movements and removes affected segments
+- **band_pass_filtering**	Applies Chebyshev Type I band-pass filter
+- **modwt, modwtmra**	Wavelet decomposition and multi-resolution analysis
+- **vitals**	Estimates heart rate from wavelet cycles
+- **calculate_errors**	Computes and visualizes errors between heart rates
