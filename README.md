@@ -27,7 +27,7 @@ Install dependencies using:
 
 ```bash
 pip install numpy pandas scipy scikit-learn
-
+```
 ## 📁 File Structure
 File	Description
 main.py:	Main script that processes data and runs pipeline
