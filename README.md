@@ -39,14 +39,14 @@ File	Description
 - **error_calculations.py**:	Calculates and visualizes errors
 
 ## 🚀 How to Run
-- 1- download dataset from here https://doi.org/10.6084/m9.figshare.26013157 
-- 2- learn more about dataset from here if needed https://www.nature.com/articles/s41597-024-03950-5
-- 3- replace this line 
+-  download dataset from here https://doi.org/10.6084/m9.figshare.26013157 
+-  learn more about dataset from here if needed https://www.nature.com/articles/s41597-024-03950-5
+-  replace this line 
 ``` dataset_root = '../../dataset/dataset/data/'
 ```
 by your dataset root folder path
 
-- 4- Run the main script:
+-  Run the main script:
 ```bash
 python main.py
 ```
