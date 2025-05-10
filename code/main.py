@@ -13,7 +13,6 @@ from compute_vitals import vitals
 from detect_body_movements import detect_patterns
 from modwt_matlab_fft import modwt
 from modwt_mra_matlab_fft import modwtmra
-from sklearn.metrics import mean_absolute_error, mean_squared_error
 from error_calculations import calculate_errors
 dataset_root = '../../dataset/dataset/data/'
 
