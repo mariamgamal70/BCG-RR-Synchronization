@@ -17,6 +17,11 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from error_calculations import calculate_errors
 dataset_root = '../../dataset/dataset/data/'
 
+RR_TOTAL_HEARTRATE=[]
+BCG_TOTAL_HEARTRATE=[]
+RR_TOTAL_TIME=[]
+BCG_TOTAL_TIME=[]
+
 for subject_id in os.listdir(dataset_root):
     subject_path = os.path.join(dataset_root, subject_id)
     print (f'\nProcessing subject: {subject_id}')
@@ -124,6 +129,12 @@ for subject_id in os.listdir(dataset_root):
         print('Average heart rate(RR) : ', np.around(np.mean(aligned_rr_hr)))
         # Calculate errors and plot
         calculate_errors(bcg_heartrate, aligned_rr_hr, bcg_heartrate_timestamps)
+        # Append results to the total lists
+        RR_TOTAL_HEARTRATE.append(aligned_rr_hr)
+        BCG_TOTAL_HEARTRATE.append(bcg_heartrate)
+        RR_TOTAL_TIME.append(bcg_heartrate_timestamps)
+        BCG_TOTAL_TIME.append(synchronized_bcg_time)
 #==========================================================================================
+calculate_errors(BCG_TOTAL_HEARTRATE, RR_TOTAL_HEARTRATE, BCG_TOTAL_TIME)
 
 print('\nEnd processing ...')
