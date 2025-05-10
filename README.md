@@ -43,10 +43,11 @@ Place the BCG and RR data files in the following directories:
 ```bash
 dataset/dataset/data/<subject_id>/BCG/*.csv
 dataset/dataset/data/<subject_id>/Reference/RR/*.csv
-
+```
 Run the main script:
 ```bash
 python main.py
+```
 The script will process each subject’s data, synchronize timestamps, estimate heart rates, and calculate errors.
 
 ## 🗃️ Input Data Format
