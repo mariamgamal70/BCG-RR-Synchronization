@@ -90,3 +90,9 @@ Function	Description
 - **modwt, modwtmra**	Wavelet decomposition and multi-resolution analysis
 - **vitals**	Estimates heart rate from wavelet cycles
 - **calculate_errors**	Computes and visualizes errors between heart rates
+
+## members:
+- Mariam Gamal
+- Nadine Nabil
+- Rawan Abdelnasser
+  
