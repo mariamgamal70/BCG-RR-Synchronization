@@ -42,7 +42,8 @@ File	Description
 -  download dataset from here https://doi.org/10.6084/m9.figshare.26013157 
 -  learn more about dataset from here if needed https://www.nature.com/articles/s41597-024-03950-5
 -  replace this line 
-``` dataset_root = '../../dataset/dataset/data/'
+```bash
+dataset_root = '../../dataset/dataset/data/'
 ```
 by your dataset root folder path
 
