@@ -45,9 +45,12 @@ def calculate_errors(bcg_heartrate, aligned_rr_hr, bcg_heartrate_timestamps):
     # Pearson correlation
     correlation = np.corrcoef(bcg_heartrate, aligned_rr_hr)[0, 1]
 
+    slope, intercept = np.polyfit(aligned_rr_hr, bcg_heartrate, 1)
+    regression_line = slope * np.array(aligned_rr_hr) + intercept
     # Scatter plot
     plt.figure(figsize=(10, 6))
     plt.scatter(aligned_rr_hr, bcg_heartrate, alpha=0.5)
+    plt.plot(aligned_rr_hr, regression_line, color='red', linestyle='--', label="Regression Line")
     plt.xlabel("RR Heart Rate (BPM)")
     plt.ylabel("BCG Heart Rate (BPM)")
     plt.title(f"Pearson Correlation Plot (r = {correlation:.2f})")
